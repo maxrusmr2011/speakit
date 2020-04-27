@@ -1,0 +1,177 @@
+.page1 {
+  min-height: 100vh;
+  padding: 5px;
+}
+
+.game-start .page1 {
+  background: -webkit-linear-gradient(bottom, rgb(239, 253, 224) 0%, darken(rgb(239, 253, 224), 20%) 100%);
+}
+
+.game-speech .page1 {
+  background: -webkit-linear-gradient(bottom, rgb(248, 240, 209) 0%, darken(rgb(248, 240, 209), 20%) 100%);
+}
+
+.game {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+$size-star: 30px;
+.game__star {
+  height: $size-star;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.star {
+  height: $size-star;
+  width: $size-star;
+  
+  &-success {
+    background: url("./src/assets/img/star-win.svg");
+    background-size: cover;
+  }
+  &-fail {
+    background: url("./src/assets/img/star.svg");
+    background-size: cover;
+  }
+}
+
+.game__content {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.game__image {
+  padding-top: 65%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    border: 2px solid blue;
+    object-fit: cover;
+  }
+}
+
+.game__translate {
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.game__speech {
+  position: relative;
+  height: 40px;
+  padding: 0 0 0 40px;
+  background: white;
+ 
+  .speech__mic {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    object-fit: cover;
+  }
+  .speech__text {
+    height: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 0;
+    
+  }
+  .speech-success {
+    background: greenyellow;
+  }
+  .speech-fail {
+    background: orange;
+  }
+}
+
+.game__words {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn-word {
+  width: 170px;
+  height: 60px;
+  margin: 10px 10px;
+  padding: 0 0 0 40px;
+  position: relative;
+  border-radius: 8px;
+  background: rgb(208, 250, 250);
+  div {
+    font-size: 1.2rem;
+  }
+}
+
+.word-success {
+  background: aqua;
+}
+
+.icon-sound {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  top: 15px;
+  object-fit: cover;
+}
+
+.game__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .btn-start, .btn-result {
+    flex: 1 1 15%;
+  }
+  .btn-speak {
+    flex: 1 1 50%;
+  }
+  .btn-next {
+    flex: 1 1 100%;
+  }
+}
+
+.btn {
+  padding: 5px 20px;
+  border-radius: 8px;
+  margin: 0 30px 5px;
+  background: cornflowerblue;
+  font-size: 1.5rem;
+  
+  &:hover:not(:disabled) {
+    background: darken(cornflowerblue, 10%);
+  }
+  &:disabled {
+    background: #cccccc;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-word {
+    width: 130px;
+    height: 40px;
+    padding: 0 0 0 25px;
+    div {
+      font-size: 0.8rem;
+    }
+
+  }
+  .icon-sound {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(top, $color-main 0%, lighten($color-main, 20%) 100%);
+}
+
+.start {
+  max-width: 300px;
+  text-align: center;
+  h1 {
+    color: darken($color-main, 10%);
+  }
+  p {
+    margin: 20px 0;
+  }
+  &__btn {
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 5px;
+    background: darken($color-main, 10%);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background: lighten($color-main, 5%);
+      box-shadow: inset 0 0 8px 1px rgba(0,0,0,0.5);
+    }
+  }
+}
