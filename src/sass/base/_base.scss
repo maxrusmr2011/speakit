@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  user-select: none;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  transition: 0.5s;
+}
+
+.hide {
+  display: none !important;
+}

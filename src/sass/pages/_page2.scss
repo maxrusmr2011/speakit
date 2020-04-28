@@ -1,0 +1,71 @@
+.page2 {
+  min-height: 100vh;
+  padding-bottom: 10px;
+  background: -webkit-linear-gradient(bottom, rgb(198, 218, 241) 0%, darken(rgb(198, 218, 241), 20%) 100%);
+}
+
+.result {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.result__title {
+  margin-bottom: 20px;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.result__errors, .result__success {
+  margin-bottom: 20px;
+  text-align: center;
+  color: blue;
+  font-size: 1.5rem;
+  span {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: white;
+  }
+}
+.result__errors span {
+  background: red;
+}
+.result__success span {
+  background: green;
+}
+
+.line {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  &:hover {
+    background: aquamarine;
+  }
+  div {
+    margin-right: 30px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("./src/assets/img/sound.png") no-repeat;
+    background-size: contain;
+    margin: 0 20px 0 5px;
+  }
+
+}
+
+.result__buttons .btn {
+  display: block;
+  width: 96%;
+  margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+  .line {
+    font-size: 0.8rem;
+  }
+}

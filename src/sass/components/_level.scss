@@ -1,0 +1,20 @@
+
+.game__level {
+  display: flex;
+}
+
+.level {
+  margin-right: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  &:hover {
+    background: aquamarine;
+  }
+  &-active {
+    border: 1px solid black;
+    color: red;
+
+  }
+}
